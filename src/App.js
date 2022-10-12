@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 
 function App() {
-const url = 'https://jsonplaceholder.typicode.com/users'
+const url = 'http://jsonplaceholder.typicode.com/comments'
 const [users, setUsers] = useState()
 const fetchApi = async () => {
   const response = await fetch(url)
@@ -19,7 +19,7 @@ useEffect(() => {
     <div className="datos">
     { !users ? 'Cargando...' :
     users.map((user,index) => {
-      return <h4 key={index}>{user.id}.{user.name}</h4>
+      return <h4 key={index}>{user.id}.{user.email}</h4>
       })
     }
     </div>
