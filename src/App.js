@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 
 function App() {
-const url = 'http://jsonplaceholder.typicode.com/comments'
+const url = 'https://jsonplaceholder.typicode.com/comments'
 const [users, setUsers] = useState()
 const fetchApi = async () => {
   const response = await fetch(url)
